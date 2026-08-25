@@ -1,0 +1,147 @@
+.templates-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr 220px;
+  gap: var(--space-md);
+}
+
+@media (max-width: 1100px) {
+  .templates-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Template List Sidebar */
+.templates-sidebar {
+  padding: 0;
+  overflow: hidden;
+}
+
+.templates-sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.templates-sidebar-header h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.templates-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.template-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+}
+
+.template-item:hover {
+  background: rgba(99, 102, 241, 0.04);
+  color: var(--text-primary);
+}
+
+.template-item.active {
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--text-primary);
+  border-left: 3px solid var(--accent-indigo);
+}
+
+.template-item-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.template-item-name {
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.template-item-actions {
+  display: flex;
+  gap: 2px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.template-item:hover .template-item-actions {
+  opacity: 1;
+}
+
+/* Editor */
+.template-editor {
+  min-height: 400px;
+}
+
+.template-edit-fields {
+  /* contained in the glass card */
+}
+
+/* Preview */
+.template-preview {
+  background: var(--bg-input);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.preview-subject {
+  font-size: 14px;
+  color: var(--text-primary);
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.preview-body {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Merge Fields */
+.merge-fields-panel {
+  padding: var(--space-lg);
+  height: fit-content;
+}
+
+.merge-fields-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.merge-field-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.merge-field-code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-indigo);
+  background: rgba(99, 102, 241, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.merge-field-desc {
+  font-size: 11px;
+  color: var(--text-dim);
+}

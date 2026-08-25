@@ -1,0 +1,130 @@
+.lead-details-header {
+  margin-bottom: var(--space-xl);
+}
+
+.lead-details-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-md);
+}
+
+.lead-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+@media (max-width: 900px) {
+  .lead-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lead-info-panel {
+  padding: var(--space-lg);
+}
+
+.lead-info-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.lead-info-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.lead-info-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: var(--space-lg);
+}
+
+.lead-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.lead-timeline-panel {
+  padding: var(--space-lg);
+}
+
+.lead-timeline-panel h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Campaign Meta */
+.campaign-meta {
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.campaign-meta-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.campaign-meta-label {
+  color: var(--text-muted);
+}
+
+/* Replies Section */
+.lead-replies {
+  padding: var(--space-lg);
+}
+
+.lead-replies-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+}
+
+.lead-replies-header h2 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.chat-bubble-from {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+.chat-bubble-subject {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.chat-bubble-body {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.chat-bubble.sent .chat-bubble-from {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.chat-bubble.sent .chat-bubble-subject {
+  color: rgba(255, 255, 255, 0.9);
+}

@@ -1,0 +1,116 @@
+.settings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+@media (max-width: 900px) {
+  .settings-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.settings-section {
+  padding: 0;
+  overflow: hidden;
+}
+
+.settings-section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.settings-section-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.settings-section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.settings-section-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.settings-section-body {
+  padding: var(--space-lg);
+}
+
+/* Gmail Status */
+.gmail-status {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+}
+
+.gmail-status.connected {
+  background: var(--success-bg);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.gmail-status.disconnected {
+  background: var(--danger-bg);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.gmail-status strong {
+  display: block;
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.gmail-status p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.gmail-status .btn {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* Info Grid */
+.settings-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.settings-info-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.settings-info-item:last-child {
+  border-bottom: none;
+}
+
+.settings-info-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.settings-info-value {
+  font-size: 13px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
