@@ -84,7 +84,7 @@ export async function getLeadStats(req: AuthRequest, res: Response): Promise<voi
     ]);
 
     const stats: Record<string, number> = { total };
-    byStatus.forEach((s) => {
+    byStatus.forEach((s: any) => {
       stats[s.status] = s._count;
     });
 
